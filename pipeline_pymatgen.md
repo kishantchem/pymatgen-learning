@@ -1,17 +1,18 @@
 Working with Modules, Classes, Subclasses, Properties, and Functions in Pymatgen
 Pymatgen is a modular Python library used for materials science computations. It provides various modules, classes, properties, and functions to handle crystal structures, symmetry operations, file I/O, and more.
 
-1. Understanding Modules in Pymatgen
+# 1. Understanding Modules in Pymatgen
 Pymatgen is divided into several modules, each handling a specific task.
 
 Module	Purpose
 # pymatgen.core	Core classes (Structure, Lattice, Composition, Molecule)
 # pymatgen.io	Input/Output for CIF, POSCAR, XSF, JSON, etc.
-pymatgen.analysis	Analysis tools (Band structure, DOS, XRD)
-pymatgen.ext.matproj	Interface with Materials Project API
-pymatgen.symmetry	Crystal symmetry operations
-pymatgen.vis	Visualization tools (ASE, VTK, JMol)
-2. Classes and Objects in Pymatgen
+# pymatgen.analysis	Analysis tools (Band structure, DOS, XRD)
+# pymatgen.ext.matproj	Interface with Materials Project API
+# pymatgen.symmetry	Crystal symmetry operations
+# pymatgen.vis	Visualization tools (ASE, VTK, JMol)
+
+# 2. Classes and Objects in Pymatgen
 Classes in Pymatgen define objects like Structure, Lattice, and Composition.
 
 Example: Using the Structure Class
