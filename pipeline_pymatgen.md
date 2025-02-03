@@ -5,8 +5,8 @@ Pymatgen is a modular Python library used for materials science computations. It
 Pymatgen is divided into several modules, each handling a specific task.
 
 Module	Purpose
-#pymatgen.core	Core classes (Structure, Lattice, Composition, Molecule)
-#pymatgen.io	Input/Output for CIF, POSCAR, XSF, JSON, etc.
+# pymatgen.core	Core classes (Structure, Lattice, Composition, Molecule)
+# pymatgen.io	Input/Output for CIF, POSCAR, XSF, JSON, etc.
 pymatgen.analysis	Analysis tools (Band structure, DOS, XRD)
 pymatgen.ext.matproj	Interface with Materials Project API
 pymatgen.symmetry	Crystal symmetry operations
