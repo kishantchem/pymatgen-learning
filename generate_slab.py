@@ -43,7 +43,7 @@ atoms = AseAtomsAdaptor.get_atoms(slab)
 
 
 # Create a 2×2 supercell
-supercell = slab.make_supercell([ [10,0,0], [0,10,0], [0,0,1] ])  
+supercell = slab.make_supercell([ [3,0,0], [0,3,0], [0,0,1] ])  
 
 # Print details of the supercell
 print("Supercell dimensions:", supercell.lattice)
@@ -53,7 +53,7 @@ print("Number of atoms in supercell:", len(supercell.sites))
 supercell.to(fmt="cif", filename="Pt_111_2x2.cif")
 
 # Save as PDB file
-supercell.to(fmt="pdb", filename="Pt_111_2x2.pdb")
+supercell.to(fmt="cssr", filename="Pt_111_2x2.cssr")
 
 # Save as POSCAR for VASP
 supercell.to(fmt="poscar", filename="POSCAR_Pt_111_2x2")
