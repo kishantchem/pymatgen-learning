@@ -9,6 +9,9 @@ from pymatgen.analysis.adsorption import AdsorbateSiteFinder
 # Load the CIF file
 slab = Structure.from_file("Pt_111_2x2.cif")
 
+# Define a custom adsorption site manually (example: a site between hollow and bridge)
+custom_site = np.array([6.0, 4.0, 20.0])  # Modify coordinates as needed
+
 # Initialize Adsorbate Site Finder
 asf = AdsorbateSiteFinder(slab)
 
@@ -49,21 +52,12 @@ plt.show()
 # Define an H₂O molecule (Oxygen at origin, Hydrogens nearby)
 h2o = Molecule(["O", "H", "H"], [[0, 0, 0], [0.96, 0.0, 0.0], [-0.32, 0.92, 0.0]])
 
-# Select an adsorption site (e.g., first 'ontop' site)
-site_position = adsorption_sites["ontop"][0]  # Change to "bridge" or "hollow" if needed
 
 # Place H₂O at the adsorption site
-adsorbed_slab = asf.add_adsorbate(h2o, site_position, translate=True)
-
-# Identify indices of the added adsorbate atoms
-adsorbate_indices = list(range(len(adsorbed_slab) - len(h2o), len(adsorbed_slab)))
-
-# Manually shift the adsorbate by 4 Å along the z-axis
-for i in adsorbate_indices:
-    adsorbed_slab[i].coords += np.array([0, 0, 0.1])
+adsorbed_slab = asf.add_adsorbate(h2o, custom_site, translate=True)
 
 # Save the new structure with adsorbate
-adsorbed_slab.to("adsorbed_structure.cif")
+adsorbed_slab.to("custom_adsorbed_structure.cif")
 
 # Print confirmation
-print("H₂O placed on the adsorption site and structure saved as 'adsorbed_structure.cif'")
+print("H₂O placed on the adsorption site and structure saved as 'custom_adsorbed_structure.cif'")
