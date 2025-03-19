@@ -14,12 +14,18 @@ conda create --name pymatgen python=3.9  # Create a new environment
 conda activate pymatgen  # Activate the environment
 ```
 
-### 2. Install PYMATGEN and Prerequisites
+### 2a. Install PYMATGEN and Prerequisites using conda
 ```bash
 conda install -c conda-forge pymatgen  # Install PYMATGEN
 conda install -c conda-forge openbabel  # Install OpenBabel (for molecular file handling)
 conda install -c conda-forge ase  # Install ASE (Atomic Simulation Environment)
 conda install -c conda-forge vtk  # Install VTK (for visualization)
+```
+
+### 2b. Install PYMATGEN and Prerequisites using pip
+```bash
+conda install anaconda::pip
+pip install rdkit ## this will install rdkit in current conda environment
 ```
 
 ## Verifying Installation
