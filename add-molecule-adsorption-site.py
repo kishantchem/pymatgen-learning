@@ -1,3 +1,4 @@
+import subprocess
 import numpy as np
 from pymatgen.core import Structure
 from pymatgen.core.surface import SlabGenerator
@@ -67,3 +68,14 @@ adsorbed_slab.to("adsorbed_structure.cif")
 
 # Print confirmation
 print("H₂O placed on the adsorption site and structure saved as 'adsorbed_structure.cif'")
+
+
+# Define the command as a list
+command = ["cif2x", "-t", "QE", "input.yaml", "adsorbed_structure.cif"]
+
+# Run the command
+result = subprocess.run(command, capture_output=True, text=True)
+
+# Print the output
+print("STDOUT:", result.stdout)
+print("STDERR:", result.stderr)

@@ -27,6 +27,12 @@ conda install -c conda-forge vtk  # Install VTK (for visualization)
 conda install anaconda::pip
 pip install rdkit ## this will install rdkit in current conda environment
 ```
+### 2b. Install CIF2X to create Quantum Espresso Input file from CIF using pip
+```bash
+git clone https://github.com/issp-center-dev/cif2x.git ## Download cif2x source code
+cd cif2x
+python3 -m pip install . ## this will install cif2x in current conda environment
+```
 
 ## Verifying Installation
 Run the following Python commands to check if PYMATGEN and dependencies are correctly installed:
